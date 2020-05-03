@@ -18,7 +18,14 @@
  */
 
 const solution = (str, fun) => {
-  return () => { }
+  let i = 0;
+  
+  return () => {
+    if (str[i] === undefined) i = 0
+    const result = fun(str[i])
+    i++
+    return result
+  };
 }
 
 module.exports = {
