@@ -9,7 +9,9 @@
  */
 
 const solution = (str, fun, result = '', i = 0) => {
-  return ''
+  if (str[i] === undefined) return result
+  result += fun(str[i]);
+  return solution(str, fun, result, i + 1)
 }
 
 module.exports = {
