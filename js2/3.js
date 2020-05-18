@@ -11,7 +11,17 @@
  */
 
 const solution = (row, col) => {
-  return []
+  if (row !== null && row <= 0) {
+    return [];
+  }
+
+  if (row === null && col > 0) {
+    return [...solution(null, col - 1), 0];
+  } else if (row === null && col <= 0) {
+    return [];
+  }
+
+  return [...solution(row - 1, col), solution(null, col)];
 }
 
 module.exports = {
