@@ -11,9 +11,9 @@
 const solution = (fun, num = 0) => {
   if (fun(num)) {
     return [];
-  } else {
-    return [num, ...solution(fun, num + 1)]
   }
+  
+  return [num, ...solution(fun, num + 1)]
 }
 
 module.exports = {
