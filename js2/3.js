@@ -17,7 +17,9 @@ const solution = (row, col) => {
 
   if (row === null && col > 0) {
     return [...solution(null, col - 1), 0];
-  } else if (row === null && col <= 0) {
+  }
+  
+  if (row === null && col <= 0) {
     return [];
   }
 
