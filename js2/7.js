@@ -5,8 +5,9 @@
  */
 
 const solution = () => {
-  Array.prototype.cForEach = function (cb) {
-    return 0
+  Array.prototype.cForEach = function (cb, i = 0) {
+    if (this[i] !== undefined) cb(this[i], i, this);
+    if (this[i + 1] !== undefined) this.cForEach(cb, i + 1);
   }
 }
 
