@@ -5,7 +5,13 @@
  */
 
 const solution = (arr, obj) => {
-  return []
+  const values = [];
+
+  arr.forEach(key => {
+    if (obj.hasOwnProperty(key)) values.push(obj[key]);
+  })
+
+  return values; 
 }
 
 module.exports = {
