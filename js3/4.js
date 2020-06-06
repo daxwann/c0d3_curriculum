@@ -6,7 +6,13 @@
  */
 
 const solution = (arr, num) => {
-  return true
+  const pairs = {};
+  const result = arr.find(n1 => {
+    if (pairs.hasOwnProperty(n1)) return true;
+    pairs[num - n1] = n1;
+    return false;
+  })
+  return result !== undefined;
 }
 
 module.exports = {
