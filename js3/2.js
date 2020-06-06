@@ -12,8 +12,16 @@
  * @return {array} arr
  */
 
-const solution = (num1, num2) => {
-  return []
+const solution = (num1, num2, y = 0, matrix = []) => {
+  if (y === num1) return matrix;
+  matrix.push(createRow(num2, y));
+  return solution(num1, num2, y + 1, matrix);
+}
+
+const createRow = (num2, y, x = 0, row = []) => {
+  if (x === num2) return row;
+  row.push({x, y});
+  return createRow(num2, y, x + 1, row);
 }
 
 module.exports = {
