@@ -6,6 +6,11 @@
 
 const solution = (arr) => {
   return (obj) => {
+    const newObj = {};
+    arr.forEach(key => {
+      if (obj.hasOwnProperty(key)) newObj[key] = obj[key];
+    })
+    return newObj;
   }
 }
 
