@@ -1,0 +1,20 @@
+.fair-small {
+  display: block;
+  margin: 30vh auto 0;
+  background-image: url('small.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+  width: 421px;
+  height: 168px;
+}
+
+.scope {
+  width: 100px;
+  display: none;
+  height: 100px;
+  border-radius: 50%;
+  background-color: cornflowerblue;
+  position: absolute;
+  z-index: 1;
+}
