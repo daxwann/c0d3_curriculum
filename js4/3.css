@@ -1,0 +1,23 @@
+.fair-small {
+  display: block;
+  margin: 30vh auto 0;
+  background-image: url('small.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+  width: 421px;
+  height: 168px;
+  cursor: none;
+}
+
+.scope {
+  display: none;
+  width: 200px;
+  height: 200px;
+  clip-path: circle(95px at center);
+  background-image: url('big.jpg');
+  background-repeat: no-repeat;
+  position: fixed;
+  z-index: 1;
+  pointer-events: none;
+}
